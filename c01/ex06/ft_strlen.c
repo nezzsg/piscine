@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jusavign <jusavign@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 16:02:32 by jusavign          #+#    #+#             */
-/*   Updated: 2025/02/23 00:09:43 by jusavign         ###   ########.fr       */
+/*   Created: 2025/02/23 00:10:29 by jusavign          #+#    #+#             */
+/*   Updated: 2025/02/23 00:22:33 by jusavign         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
-{
-	int	tmp;
+#include <unistd.h>
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+		return (0);
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
